@@ -1,6 +1,28 @@
+// const { findConfigUpwards } = require("@babel/core/lib/config/files");
+
 const farmAnimals = 'cow horse sheep pig chicken';
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
+console.log(moo, neigh, baa, oink, cluck);
+
+
+const [bessie, , dolly, babe, little] = farmAnimals.split(' ');
+console.log(bessie, dolly, babe, little);
+
+const  [blackAndWhite, , black, pink, ,] = farmAnimals.split(' ');
+console.log(blackAndWhite, black, pink); 
+
+
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+ console.log(red, orange, yellow, green, blue, indigo, violet);
+
+ const [r, o, y, g, b, , v] = colors
+ console.log (r,o,y,b,g,v);
+
+const [, , , , , indg, ,] = colors;
+console.log(indigo);
+
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +31,13 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+
+const {muppetName, color, song, job, partner} = muppet
+muppetName;
+color;
+song,
+job,
+partner;
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +53,28 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+song2;
+song4;
+nestedJob;
+nestedPartner;
+
+const {
+  album: {
+    theMuppetMovie: {
+      song2,
+      song4,
+    }
+  }
+} = nestedMuppet;
+
+const { nestedJob } = nestedMuppet;
+
+const { nestedPartner } = nestedMuppet;
+
+
+
+
 
 // Strings
 
